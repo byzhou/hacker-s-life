@@ -1,9 +1,15 @@
+# -*- coding: utf-8
 import json
+import sys
 
 from wechat_sdk import WechatExt
 
+# str(sys.argv[1])
+# str(sys.argv[2])
+wechat = WechatExt(username='', password='',login=False)
+wechat.login(verify_code='FLWq')
+#wechat.get_verify_code('verify.png') # HYKW
 
-wechat = WechatExt(username='username', password='password')
 
 # 获取未分组中所有的用户成员
 user_list = wechat.get_user_list()
